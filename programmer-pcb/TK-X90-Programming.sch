@@ -1,0 +1,190 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "TK-X90 Programmer"
+Date "2020-03-29"
+Rev "A"
+Comp "Mobilinkd LLC"
+Comment1 "CC BY-SA 2.0"
+Comment2 "https://creativecommons.org/licenses/by-sa/2.0/"
+Comment3 "© 2020 Mobilinkd LLC"
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_FET:2N7002 Q1
+U 1 1 5E7795A4
+P 4850 3050
+F 0 "Q1" H 5055 3096 50  0000 L CNN
+F 1 "2N7002" H 5055 3005 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 2975 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 4850 3050 50  0001 L CNN
+	1    4850 3050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J1
+U 1 1 5E77A2C1
+P 6450 3050
+F 0 "J1" H 6422 2982 50  0000 R CNN
+F 1 "UART" H 6422 3073 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6450 3050 50  0001 C CNN
+F 3 "~" H 6450 3050 50  0001 C CNN
+	1    6450 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E77AC18
+P 6150 3300
+F 0 "#PWR03" H 6150 3050 50  0001 C CNN
+F 1 "GND" H 6155 3127 50  0000 C CNN
+F 2 "" H 6150 3300 50  0001 C CNN
+F 3 "" H 6150 3300 50  0001 C CNN
+	1    6150 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3150 6150 3150
+Wire Wire Line
+	6150 3150 6150 3300
+$Comp
+L Device:R R1
+U 1 1 5E77B2B1
+P 5200 3550
+F 0 "R1" H 5270 3596 50  0000 L CNN
+F 1 "100K" V 5200 3450 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5130 3550 50  0001 C CNN
+F 3 "~" H 5200 3550 50  0001 C CNN
+	1    5200 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5E77C9FB
+P 4050 3350
+F 0 "#PWR01" H 4050 3100 50  0001 C CNN
+F 1 "GND" H 4055 3177 50  0000 C CNN
+F 2 "" H 4050 3350 50  0001 C CNN
+F 3 "" H 4050 3350 50  0001 C CNN
+	1    4050 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 3150 4050 3150
+Wire Wire Line
+	4050 3150 4050 3350
+$Comp
+L Device:R R3
+U 1 1 5E77D261
+P 5900 2950
+F 0 "R3" V 5800 2950 50  0000 C CNN
+F 1 "1K" V 5900 2950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5830 2950 50  0001 C CNN
+F 3 "~" H 5900 2950 50  0001 C CNN
+	1    5900 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E77BC42
+P 5500 3050
+F 0 "R2" V 5600 3050 50  0000 C CNN
+F 1 "220" V 5500 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5430 3050 50  0001 C CNN
+F 3 "~" H 5500 3050 50  0001 C CNN
+	1    5500 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6250 2950 6050 2950
+Text Label 6150 2950 0    50   ~ 0
+RX
+Wire Wire Line
+	6250 3050 6000 3050
+Wire Wire Line
+	3950 3050 4300 3050
+Wire Wire Line
+	4300 3050 4300 3250
+Wire Wire Line
+	4300 3250 4750 3250
+Wire Wire Line
+	5550 3250 4750 3250
+Connection ~ 4750 3250
+Wire Wire Line
+	5200 3400 5200 3050
+Wire Wire Line
+	5050 3050 5200 3050
+Connection ~ 5200 3050
+Wire Wire Line
+	5200 3050 5350 3050
+Text Label 6150 3050 0    50   ~ 0
+TX
+Text Label 4000 3050 0    50   ~ 0
+TRD
+Text Label 4000 3150 0    50   ~ 0
+E
+Text Label 6150 3150 0    50   ~ 0
+GND
+$Comp
+L power:GND #PWR02
+U 1 1 5E781AD9
+P 5200 3700
+F 0 "#PWR02" H 5200 3450 50  0001 C CNN
+F 1 "GND" H 5205 3527 50  0000 C CNN
+F 2 "" H 5200 3700 50  0001 C CNN
+F 3 "" H 5200 3700 50  0001 C CNN
+	1    5200 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3050 6000 3250
+Wire Wire Line
+	6000 3250 5850 3250
+Connection ~ 6000 3050
+Wire Wire Line
+	6000 3050 5650 3050
+Wire Wire Line
+	5750 2950 5450 2950
+Wire Wire Line
+	5450 2950 5450 2850
+Wire Wire Line
+	5450 2850 4750 2850
+$Comp
+L TK-X90-Programming:D D1
+U 1 1 5E79F878
+P 5700 3250
+F 0 "D1" H 5650 3350 50  0000 C CNN
+F 1 "D" H 5700 3125 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5700 3250 50  0001 C CNN
+F 3 "~" H 5700 3250 50  0001 C CNN
+F 4 "Diodes Inc" H 5700 3250 50  0001 C CNN "manf"
+F 5 "MMBD4148" H 5700 3250 50  0001 C CNN "manf#"
+	1    5700 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female P2
+U 1 1 5E7A72B2
+P 3750 3050
+F 0 "P2" H 3700 2950 50  0000 C CNN
+F 1 "TRD" H 3900 3050 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 3750 3050 50  0001 C CNN
+F 3 "~" H 3750 3050 50  0001 C CNN
+	1    3750 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female P1
+U 1 1 5E7A7DDA
+P 3750 3150
+F 0 "P1" H 3700 3250 50  0000 C CNN
+F 1 "GND" H 3900 3150 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 3750 3150 50  0001 C CNN
+F 3 "~" H 3750 3150 50  0001 C CNN
+	1    3750 3150
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
