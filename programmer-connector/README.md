@@ -84,9 +84,15 @@ Slide the boot assembly over the cable until it begins to mate with the
 base.  Orient the shell so that the two cut-outs match the PCB clips
 and the clips on the shell are aligned with the clip cut-outs on the base.
 
-Push the shell into the base until the clips engage.
+Push the shell into the base until the clips engage.  This will require
+a bit of force and persistence because the ABS shell is a bit too thick
+to give easily.
 
 ## Radio Connection
+
+The radio uses a proprietary 12-pin connector.  It uses pogo pins in two
+concentric rings of 6 pins, 12 & 9mm ⌀, offset by 30°.  We only need two
+pins (at 7 & 8 o'clock, TRD & GND) for the programmer.
 
 <table>
   <tr>
@@ -106,4 +112,14 @@ Plug the serial adapter into a USB connection.
 Power on the radio.
 
 Use the KPG-44D software to verify that it is functioning correctly.
+
+## Further Work
+
+After designing this, it occurred to me that the clips in the base are rather
+flimsy and hard to print accurately.  They can be eliminated entirely if the
+sleeve from the shell came down further to hold the PCB in place.  There is
+enough clearance for that.
+
+The inner sleeve would need to be extended 1.5-1.8mm and the clips re-oriented
+to act as PCB & shell alignment guides.
 
