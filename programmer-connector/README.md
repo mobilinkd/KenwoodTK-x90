@@ -5,7 +5,11 @@ TK-x90 programmer connector.  This fits the Kenwood TK-690, TK-790 and
 TK-890 radios.  It is intended to be used with the TK-x90 programmer
 PCB in this repository.
 
-![Exlpoded View](Programmer.png)
+<table>
+  <tr>
+    <td> <img src="Programmer.png" alt="Exlpoded View" style="width: 500px;"/> </td>
+  </tr>
+</table>
 
 The boot is sized to fit around common CAT 5e Ethernet cable.
 
