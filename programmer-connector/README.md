@@ -26,6 +26,10 @@ Please attribute the work to *Rob Riggs, WX9O, Mobilinkd LLC*.
 
 ## Build Recommendations
 
+Tolerances are rather tight, especially between the PCB and base. There is
+only 0.5mm space and PCB manufacturing tolerances can eat up more than half
+that.  The part assembly does not tolerate shrinkage or over-extrusion well.
+
 These models were originally built using a FlashForge Creator X, heavily
 modified.  The modifications include full enclosure, Creator Pro Z stage,
 all metal hot-ends, and optical Z end-stop.  The models were printed on a

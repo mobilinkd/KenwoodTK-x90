@@ -30,11 +30,14 @@ Please attribute the work to *Rob Riggs, WX9O, Mobilinkd LLC*.
 
 ## Theory of Operation
 
-This circuit converts a standard 3-wire serial port into a one-wire serial
-port, ensuring the data transmitted by the serial adapter does not see its
-transmissions on the RX line (no local echo).
+This circuit converts a standard 3-wire serial interface into a one-wire serial
+interface, ensuring the data transmitted by the serial two-wire interface does
+not see its TX data on the RX line (no local echo).
 
-The input to the programmer is a standard 3-wire asynchronous serial signal
+One side of the interface has GND, TX and RX.  The other side has GND and TRD
+(transmit/receive data).  TRD is pulled high by the radio when powered on.
+
+The input to the programmer is a standard 3-wire asynchronous serial connection
 from a 5V capable USB to TTL serial adapter.  This is converted to a one-wire
 serial protocol.  Unlike the one-wire implementation in Motorola radios, the
 Kenwood protocol does not allow local echo of the transmitted data.
@@ -43,13 +46,14 @@ The serial RX line is pulled high and serial TX operates in push-pull mode.
 
 The N-channel MOSFET Q1 shuts off the RX connection when TX brings the line
 LOW.  This leave RX high while the serial module transmits. TX pulls TRD low
-via D1.
+via D1. TX operates as if in open drain mode.
 
 When the radio is transmitting, TX is high, Q1 is conducting, allowing TRD to
 pull RX high or low through Q1.  D1 prevents the TX line from interfering
 the TRD data transmission.
 
-In the next revision, R3 will be moved to the P2/Q1-Drain net.
+It might be helpful to note that there is a 100Ω resistor on the TRD line in
+the radio itself.
 
 ## BOM
 
